@@ -1,0 +1,35 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "a personal workspace to plan your day to day activities",
+  "main": "index.js",
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
+  },
+  "scripts": {
+    "test": "npm run test",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirsaleem-kn/workspace.git"
+  },
+  "keywords": [
+    "node",
+    "react",
+    "express",
+    "passport",
+    "mongo"
+  ],
+  "author": "Amir Saleem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amirsaleem-kn/workspace/issues"
+  },
+  "homepage": "https://github.com/amirsaleem-kn/workspace#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
