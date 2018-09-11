@@ -3,8 +3,8 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
 
-require('./lib/models/models-main');
-require('./bin/passport/passport-main');
+require('./lib/models');
+require('./bin/passport');
 
 const app = express();
 
