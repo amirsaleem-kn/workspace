@@ -17,6 +17,12 @@ const googleStrategy = {
 };
 
 async function googleStrategyCallback (accessToken, refreshToken, profile, done) {
+    const googleID = profile.id;
+    const firstName = profile.givenName;
+    const lastName = profile.familyName;
+    const email = profile.emails[0]['value'];
+    const profileUrl = profile.photos[0];
+    const gender = profile.gender;
     console.log(profile);
 }
 
