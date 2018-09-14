@@ -1,13 +1,12 @@
 const express = require('express');
-const passport = require('passport');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
 
-require('./lib/models');
-require('./bin/passport');
+require('./lib/models'); // import all models from index.js
 
 const app = express();
 
+// connect to mongoDB
 mongoose.connect(keys.mongoURI);
 
 app.use(passport.initialize());
@@ -18,9 +17,7 @@ app.get('/', ( req, res ) => {
     res.send('<h1>Welcome to your workspace</h1>');
 });
 
-app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
-app.get('/auth/google/callback', passport.authenticate('google'));
-
+// start the server
 app.listen(PORT, () => {
     console.log(`Server listening to port: ${PORT}`);
 });
